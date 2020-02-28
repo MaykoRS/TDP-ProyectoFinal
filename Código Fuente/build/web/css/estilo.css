@@ -1,0 +1,230 @@
+@CHARSET "UTF-8";
+
+/*
+	etiqueta{
+		propiedad:valor;
+	}
+*/
+
+body{
+	font-family: 'Overlock', cursive;
+	font-size: 20px;
+	background: url(../Imagenes/deporte.jpg);
+	background-size: 180%; 
+}
+
+
+footer{
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 0.8em;
+	margin-top: 2px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0b7a1+0,8c3310+50,752201+51,bf6e4e+100;Brown+Gloss */
+	background: #f0b7a1; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #f0b7a1 0%, #8c3310 50%, #752201 51%, #bf6e4e 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover,  #f0b7a1 0%,#8c3310 50%,#752201 51%,#bf6e4e 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center,  #f0b7a1 0%,#8c3310 50%,#752201 51%,#bf6e4e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', endColorstr='#bf6e4e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+header{
+	background-color: #20B2AA;
+}
+
+header figure {
+	float: left;
+	margin-left: 100px;
+}
+
+header figure img{
+	width: 300px;
+	height: 150px;
+	border-radius: 50%;
+}
+
+header h1{
+    text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87
+}
+
+header h3{
+    text-shadow: 0 0 0.2em #8F7
+}
+
+header nav ul{
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+	list-style: none;
+}
+
+header nav ul li{
+	height: 35px;
+	margin: 10px;
+	width: 100%;
+	display: inline-block;
+}
+
+header nav ul li a{
+	text-decoration: none;
+	font-weight: bold;
+	color: #f7f7f7;
+	padding: 15px 25px;
+}
+
+div{
+        text-decoration: none;
+	font-weight: bold;
+	color: #f7f7f7;
+}
+
+section article.deporte{
+	border-width: 2px;
+	border-style: solid;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	border-radius: 0px 0px 15px 15px;
+	margin: 50px 0px 20px 10%;
+	width: 85%;
+	font-size: 1.2em;
+}
+
+section article.deporte figure{
+	float: left;
+	margin-top: -50px;
+	margin-left: -30px;
+}
+
+section article.deporte figure img{
+	border-radius: 50%;
+	border-width: 5px;
+	border-style: solid;
+	width: 180px;
+	height: 140px;
+}
+
+section article.deporte span.tipo{
+	position: absolute;
+	border-width: 2px;
+	border-style: solid;
+	top: -38px;
+	right: -2px;
+	height: 30px;
+	line-height: 30px;
+	padding: 2px 10px;
+	border-radius: 15px 15px 0px 0px;
+	font-weight: bolder;
+	color: #f7f7f7;
+}
+
+section article.deporte p{
+	font-size: 0.8em;
+	text-align: justify;
+	margin: 15px 10px 5px 30px;
+}
+
+/*******************************************/
+/********** COLORES FUTBOL ***************/
+/*******************************************/
+section article.futbol,
+section article.futbol figure img,
+section article.futbol span.tipo{
+	border-color: #082E0B;
+}
+
+section article.futbol span.tipo{
+	background-color: #154419;
+}
+
+section article.futbol p{
+	color: #3E7242;
+}
+
+section article.futbol{
+	background-color: #C0EE90;
+}
+
+/*******************************************/
+/********** COLORES BASQUET ***************/
+/*******************************************/
+section article.basquet,
+section article.basquet figure img,
+section article.basquet span.tipo{
+	border-color: #1B0C02;
+}
+
+section article.basquet span.tipo{
+	background-color: #5A3107;
+}
+
+section article.basquet p{
+	color: #97521E;
+}
+
+section article.basquet{
+	background-color: #B29178;
+}
+
+/*******************************************/
+/********** COLORES VOLEY ***************/
+/*******************************************/
+section article.voley,
+section article.voley figure img,
+section article.voley span.tipo{
+	border-color: #020F2B;
+}
+
+section article.voley span.tipo{
+	background-color: #08215B;
+}
+
+section article.voley p{
+	color: #335093;
+}
+
+section article.voley{
+	background-color: #87CEFA;
+}
+
+/*******************************************/
+/********** COLORES PADDLE ***************/
+/*******************************************/
+section article.paddle,
+section article.paddle figure img,
+section article.paddle span.tipo{
+	border-color: #8B0000;
+}
+
+section article.paddle span.tipo{
+	background-color: #B22222;
+}
+
+section article.paddle p{
+	color: #8B0000;
+}
+
+section article.paddle{
+	background-color: #FF4500;
+}
+
+
+@media screen and (min-width: 480px){
+	header nav ul li{
+		width: 22%;
+	}
+}
+
+@media screen and (min-width: 767px){
+	header nav ul li{
+		width: 8%;
+	}
+	section article.deporte{
+		width: 40%;
+		margin: 50px 3% 20px 6%;
+	}
+}
+
+@media screen and (min-width: 950px){
+	
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true"/>
+    
+    <!-- Configuration for the default package. -->
+    <package name="ProyectoFinal" extends="struts-default">
+        
+        <!-- Valida los datos del administrador -->
+        <action name="Validar" class="ActionClass.Usuario">
+            <result name="success">/bienvenida.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        
+        <!-- Redirecciona a la página principal (home)  -->
+        <action name="home">
+            <result name="success">/jsp/index.jsp</result>
+        </action>
+        
+        <!-- Redirecciona a la página del administrador -->
+        <action name="bienvenida">
+            <result name="success">/bienvenida.jsp</result>
+        </action>
+        
+        <!-- Redirecciona a la página donde se seleeciona al jugador a eliminar -->
+        <action name="eliminar" class="ActionClass.Partido" method="actualizarLista">
+            <result name="success">/eliminarJugador.jsp</result>
+        </action>
+        
+        
+        <!-- Muestra la lista de jugadores inscriptos -->
+        <action name="verLista" class="ActionClass.Partido" method="verLista">
+            <result name="success">/jsp/futbol.jsp</result>
+        </action>
+        
+        <!-- Elimina al jugador que fue seleccionado -->
+        <action name="eliminarJugador" class="ActionClass.Partido" method="borrarJugador">
+            <result name="success">/inscripcionExitosa.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        
+        <!-- Da por finalizado el partido -->
+        <action name="darBaja" class="ActionClass.Partido" method="darBajaPartido">
+            <result name="success">/inscripcionExitosa.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        
+        <!-- Cierra sesión el administrador y le redirecciona al a página principal -->
+        <action name="logout" method="logOut" class="ActionClass.Usuario">
+            <result name="success">/jsp/index.jsp</result>
+        </action>
+        
+        <!--Inscribe un jugador -->  
+        <action name="inscribirFutbol" class="ActionClass.Partido" method="inscribirJugador">
+            <result name="success">/inscripcionExitosa.jsp</result>
+        </action>
+        
+        
+        <!-- Redirecciona a la página de los controles del administrador -->
+        <action name="siguiente"  class="ActionClass.Partido" method="escribirDeporte">
+            <result name="success">/administracion.jsp</result>
+        </action>
+        
+                    
+        <!-- VERIFICACIONES DE CUPOS -->   
+        <action name="verificarCupoFutbol" class="ActionClass.Partido" method="verificarCupoFutbol">
+            <result name="success">/jsp/futbol.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        
+        <action name="verificarCupoBasquet" class="ActionClass.Partido" method="verificarCupoBasquet">
+            <result name="success">/jsp/futbol.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        
+        <action name="verificarCupoVoley" class="ActionClass.Partido" method="verificarCupoVoley">
+            <result name="success">/jsp/futbol.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        
+        <action name="verificarCupoPaddle" class="ActionClass.Partido" method="verificarCupoPaddle">
+            <result name="success">/jsp/futbol.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        
+        
+    </package>    
+    
+</struts>
